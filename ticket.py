@@ -1,5 +1,7 @@
+from datetime import date
+from .vehicle import Vehicle
 class Ticket:
-    def __init__(self, departure, destination, price, date, vehicle):
+    def __init__(self, departure, destination, price, date:date, vehicle:Vehicle):
         self.date = date
         self.departure = departure
         self.destination = destination
