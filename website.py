@@ -1,11 +1,9 @@
-class WebSite:
+class Site:
     def __init__(self, name, domain, tickets):
         self.name = name
         self.domain = domain
         self.tickets = tickets #list of tickets
     
-    def add_ticket(self, ticket):
-        self.tickets.append(ticket)
     
     def get_cheapest_ticket(self):
         if len(self.tickets)!=0:
