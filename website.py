@@ -11,6 +11,14 @@ class Site:
             return cheapest_ticket
         else:
             return None
+    def get_expensive_ticket(self):
+        #returns most expensive ticket , if multiple exist with same price, returns one
+        most_expensive_ticket = self.tickets[0]
+        for ticket in self.tickets:
+            if ticket.price > most_expensive_ticket.price:
+                most_expensive_ticket = ticket
+        return most_expensive_ticket
+
     
     def save_tickets(self):
         with open(f"{self.name}_tickets.txt", "w") as file:
