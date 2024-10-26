@@ -10,7 +10,7 @@ def main():
     search_object = Ticket(departure, destination, vehicle)
     option = Options()
     option.add_argument("--headless")
-    option.add_argument("----window-size=1920,1200")
+    option.add_argument("--window-size=1920,1200")
     driver = Chrome(option)
     site = Scraper(driver, search_object).scrape_site("alibaba")
     print(site.get_cheapest_ticket())
